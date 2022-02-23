@@ -11,27 +11,47 @@
     #fumatura{
         height: 1080px;
         background-color: black;
-        background: -webkit-linear-gradient(black, red);
+        background: -webkit-linear-gradient(black, blue);
+    }
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
     }
 </style>
 
 <body id="">
 
-    <div class="container">
+    <div class="container center">
         <h1 id="titolo"> Titolo principale </h1>
         <img src = '' id="img" style="width: 18rem;">
-
-        <button class="btn btn-primary" onclick="cambia()">CLICCA</button>
+        <br>
+        <button id="btn" class="btn btn-primary" onclick="cambia()">CLICCA</button>
     </div>
     
 </body>
 
 <script>
-
+    let cont = 0;
     function cambia(){
-        document.getElementById('titolo').innerHTML = 'CIAO';
-        document.getElementById('img').src = 'v4.jpg';
-        document.body.id = 'fumatura';
+        if (cont == 0){
+            document.getElementById('titolo').innerHTML = 'CIAO';
+            document.getElementById('img').src = 'v4.jpg';
+            document.body.id = 'fumatura';
+            document.getElementById('btn').innerHTML = 'RICARICA';
+            document.getElementById('btn').className = 'btn btn-danger';
+            document.getElementById('btn').style.marginTop = '10px';
+            cont++;
+        }
+        else{
+            document.getElementById('titolo').innerHTML = 'Titolo principale';
+            document.getElementById('img').src = '';
+            document.body.id = '';
+            document.getElementById('btn').innerHTML = 'CLICCA';
+            document.getElementById('btn').className = 'btn btn-primary';
+            cont = 0
+        }
     }
 
 </script>
