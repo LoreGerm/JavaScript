@@ -23,7 +23,7 @@
             <button class="btn btn-dark col-2" type="button" onclick="div()"> / </button>
         </div>
         <br>
-        <div id="div"></div>
+        <div id="ris"></div>
     </div>
 
     <script>
@@ -31,25 +31,25 @@
             n1 = document.getElementById('n1').value;
             n2 = document.getElementById('n2').value;
             som = parseFloat(n1) + parseFloat(n2);
-            document.getElementById('div').innerHTML ='<h2> Somma:   '+som+'</h2>';
+            document.getElementById('ris').innerHTML ='<h2> Somma:   '+som+'</h2>';
         }
         function mol(){
             n1 = document.getElementById('n1').value;
             n2 = document.getElementById('n2').value;
             molt = parseFloat(n1) * parseFloat(n2);
-            document.getElementById('div').innerHTML ='<h2> Moltiplicazione:   '+molt+'</h2>';
+            document.getElementById('ris').innerHTML ='<h2> Moltiplicazione:   '+molt+'</h2>';
         }
         function div(){
             n1 = document.getElementById('n1').value;
             n2 = document.getElementById('n2').value;
             divi = parseFloat(n1) / parseFloat(n2);
-            document.getElementById('div').innerHTML ='<h2> Divisione:   '+divi+'</h2>';
+            document.getElementById('ris').innerHTML ='<h2> Divisione:   '+divi+'</h2>';
         }
         function sott(){
             n1 = document.getElementById('n1').value;
             n2 = document.getElementById('n2').value;
-            sot = parseFloat(n1) - parseFloat(n2);
-            document.getElementById('div').innerHTML ='<h2> Sottrazione:   '+sot+'</h2>';
+            sot = parseFloat(n1) - parriseFloat(n2);
+            document.getElementById('ris').innerHTML ='<h2> Sottrazione:   '+sot+'</h2>';
         }
 
 
