@@ -38,21 +38,22 @@
         function lancia(){
             giocatore = document.getElementsByClassName('btn-success')[0].id;
 
+            let TESTA = 1;
             let vin = Math.floor(Math.random() * 2);
-            if(vin == testa){
+            if(vin == TESTA){
                 if(giocatore == 'testa'){
                     document.getElementById('ris').innerHTML = "<h2>E' USCITO TESTA,  HAI VINTO </h2>";
                 }
                 else{
-                    document.getElementById('ris').innerHTML = "<h2>E' USCITO CROCE,  HAI VINTO </h2>";
+                    document.getElementById('ris').innerHTML = "<h2>E' USCITO TESTA,  HAI PERSO </h2>";
                 }
             }
             else{
-                if(giocatore == 'testa'){
+                if(giocatore == 'croce'){
                     document.getElementById('ris').innerHTML = "<h2>E' USCITO CROCE,  HAI VINTO </h2>";
                 }
                 else{
-                    document.getElementById('ris').innerHTML = "<h2>E' USCITO TESTA,  HAI VINTO </h2>";
+                    document.getElementById('ris').innerHTML = "<h2>E' USCITO CROCE,  HAI PERSO </h2>";
                 }
             }
         }
