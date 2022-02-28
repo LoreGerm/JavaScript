@@ -24,6 +24,7 @@
 
     <script>
         function moneta(id){
+            let testa = 1;
             if(id == 'testa'){
                 document.getElementById(id).classList = 'btn btn-success';
                 document.getElementById('croce').classList = 'btn';
@@ -38,7 +39,7 @@
             giocatore = document.getElementsByClassName('btn-success')[0].id;
 
             let vin = Math.floor(Math.random() * 2);
-            if(vin == 1){
+            if(vin == testa){
                 if(giocatore == 'testa'){
                     document.getElementById('ris').innerHTML = '<h2> TESTA,  HAI VINTO </h2>';
                 }
