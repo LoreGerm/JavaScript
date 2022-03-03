@@ -15,11 +15,15 @@ function difficolta(id){
 }
 
 
-
+function home(){
+    document.getElementById('scelta').classList.remove('d-none');
+    document.getElementById('gioco').classList.add('d-none');
+    document.getElementById('ut').innerHTML = 0
+    document.getElementById('co').innerHTML = 0
+}
 
 
 function moneta(id){
-    let testa = 1;
     if(id == 'testa'){
         document.getElementById(id).classList = 'btn btn-success';
         document.getElementById('croce').classList = 'btn';
