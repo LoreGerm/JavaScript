@@ -3,23 +3,22 @@ let VINCI = 0;
 function difficolta(id){
     document.getElementById('gioco').classList.remove('d-none');
     document.getElementById('scelta').classList.add('d-none');
-    if(id == 'facile'){
-        VINCI = 0.7;
-    }
-    else if(id == 'medio'){
-        VINCI = 0.5;
-    }
-    else if(id == 'difficile'){
-        VINCI = 0.3;
-    }
+    VINCI = document.getElementById(id).value;
 }
 
 
-
+function home(){
+    document.getElementById('scelta').classList.remove('d-none');
+    document.getElementById('gioco').classList.add('d-none');
+    document.getElementById('ut').innerHTML = 0;
+    document.getElementById('co').innerHTML = 0;
+    document.getElementById('ris').innerHTML = ''
+    document.getElementById('croce').classList = 'btn';
+    document.getElementById('testa').classList = 'btn';
+}
 
 
 function moneta(id){
-    let testa = 1;
     if(id == 'testa'){
         document.getElementById(id).classList = 'btn btn-success';
         document.getElementById('croce').classList = 'btn';
