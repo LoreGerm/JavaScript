@@ -12,6 +12,9 @@ function home(){
     document.getElementById('gioco').classList.add('d-none');
     document.getElementById('ut').innerHTML = 0;
     document.getElementById('co').innerHTML = 0;
+    document.getElementById('ris').innerHTML = ''
+    document.getElementById('croce').classList = 'btn';
+    document.getElementById('testa').classList = 'btn';
 }
 
 
