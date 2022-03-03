@@ -3,15 +3,7 @@ let VINCI = 0;
 function difficolta(id){
     document.getElementById('gioco').classList.remove('d-none');
     document.getElementById('scelta').classList.add('d-none');
-    if(id == 'facile'){
-        VINCI = 0.7;
-    }
-    else if(id == 'medio'){
-        VINCI = 0.5;
-    }
-    else if(id == 'difficile'){
-        VINCI = 0.3;
-    }
+    VINCI = document.getElementById(id).value;
 }
 
 
