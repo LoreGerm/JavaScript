@@ -35,14 +35,14 @@
 
         function calcola(){
             let num = document.getElementById('numero').value;
-            let cont = 1;
             let mul = [];
-            while (mul.length != 5){
-                if((num*cont)%2 == 0){
-                    mul.push(num*cont);
-                }
-                cont++;
+            let n = 1+(num%2);
+            let max = 5*n;
+
+            for(i = n; i<=max; i=i+1*n){
+                mul.push(num*i);
             }
+
             document.getElementById('risultato').innerHTML ='<h2>'+ mul +'</h2>';
         }
 
