@@ -1,5 +1,4 @@
 function start(scelta){
-
     document.getElementById('home').classList.remove('d-none');
     document.getElementById('gioco').classList.add('d-none');
 
@@ -8,7 +7,7 @@ function start(scelta){
     const FORBI = 1;
     const CARTA = 2;
 
-    
+
     if(scelta == SASSO){
         if(risultato == SASSO){
             document.getElementById('ris').innerHTML = '<img src="img/sasso.png" alt=""> <h2>HAI PAREGGIATO </h2>';
@@ -46,7 +45,6 @@ function start(scelta){
 }
 
 function home(){
-
     document.getElementById('home').classList.add('d-none');
     document.getElementById('gioco').classList.remove('d-none');    
 }
