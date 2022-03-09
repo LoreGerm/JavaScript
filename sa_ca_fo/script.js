@@ -8,6 +8,13 @@ function start(scelta){
     const FORBI = 1;
     const CARTA = 2;
 
+/*
+    if(scelta == risultato){
+        let src ='img/' + document.getElementById(scelta).value + '.png';
+        document.getElementById('ris').innerHTML = '<img src="' + src + '" alt=""> <p> PAREGGIO </p>';
+    }
+    
+*/
     if(scelta == SASSO){
         if(risultato == SASSO){
             document.getElementById('ris').innerHTML = '<img src="img/sasso.png" alt=""> <p> PAREGGIO </p>';
