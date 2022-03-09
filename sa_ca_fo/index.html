@@ -10,13 +10,19 @@
 </head>
 
 <body style="background-color: #6b97d1; color: #fff;">
-
+    <div class="d-none" id="home">
+        <button class="btn" onclick="home()"><img src="img/home.png" alt="" style="width: 15%; margin-left: -50%;"></button>
+    </div>
+    
     <div class="text-center">
-        <div class="container">
-            <button id="sasso" class="btn" onclick="start(this.id)"><img src="img/sasso.png" alt=""></button>
-            <button id="carta" class="btn" onclick="start(this.id)"><img src="img/carta.png" alt=""></button>
-            <button id="forbice" class="btn" onclick="start(this.id)"><img src="img/forbice.png" alt=""></button>
+        <div class="container" id="gioco">
+            <button id="0" class="btn" onclick="start(this.id)"><img src="img/sasso.png" alt=""></button>
+            <button id="2" class="btn" onclick="start(this.id)"><img src="img/carta.png" alt=""></button>
+            <button id="1" class="btn" onclick="start(this.id)"><img src="img/forbice.png" alt=""></button>
         </div>
+
+        <div id="ris" class="container">
+        </div>    
     </div>
 
 
