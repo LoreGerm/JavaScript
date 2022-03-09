@@ -11,41 +11,41 @@ function start(scelta){
 /*
     if(scelta == risultato){
         let src ='img/' + document.getElementById(scelta).value + '.png';
-        document.getElementById('ris').innerHTML = '<img src="' + src + '" alt=""> <p> PAREGGIO </p>';
+        document.getElementById('ris').innerHTML = '<img src="' + src + '" alt=""> <h2>HAI PAREGGIATO </h2>';
     }
     
 */
     if(scelta == SASSO){
         if(risultato == SASSO){
-            document.getElementById('ris').innerHTML = '<img src="img/sasso.png" alt=""> <p> PAREGGIO </p>';
+            document.getElementById('ris').innerHTML = '<img src="img/sasso.png" alt=""> <h2>HAI PAREGGIATO </h2>';
         }
         else if(risultato == FORBI){
-            document.getElementById('ris').innerHTML = '<img src="img/forbice.png" alt=""> <p> VINTO </p>';
+            document.getElementById('ris').innerHTML = '<img src="img/forbice.png" alt=""> <h2>HAI VINTO </h2>';
         }
         else{
-            document.getElementById('ris').innerHTML = '<img src="img/carta.png" alt=""> <p> PERSO </p>';
+            document.getElementById('ris').innerHTML = '<img src="img/carta.png" alt=""> <h2>HAI PERSO </h2>';
         }
     }
     else if(scelta == FORBI){
         if(risultato == SASSO){
-            document.getElementById('ris').innerHTML = '<img src="img/sasso.png" alt=""> <p> PERSO </p>';
+            document.getElementById('ris').innerHTML = '<img src="img/sasso.png" alt=""> <h2>HAI PERSO </h2>';
         }
         else if(risultato == FORBI){
-            document.getElementById('ris').innerHTML = '<img src="img/forbice.png" alt=""> <p> PAREGGIO </p>';
+            document.getElementById('ris').innerHTML = '<img src="img/forbice.png" alt=""> <h2>HAI PAREGGIATO </h2>';
         }
         else{
-            document.getElementById('ris').innerHTML = '<img src="img/carta.png" alt=""> <p> VINTO </p>';
+            document.getElementById('ris').innerHTML = '<img src="img/carta.png" alt=""> <h2>HAI VINTO </h2>';
         }
     }
     else if(scelta == CARTA){
         if(risultato == SASSO){
-            document.getElementById('ris').innerHTML = '<img src="img/sasso.png" alt=""> <p> VINTO </p>';
+            document.getElementById('ris').innerHTML = '<img src="img/sasso.png" alt=""> <h2>HAI VINTO </h2>';
         }
         else if(risultato == FORBI){
-            document.getElementById('ris').innerHTML = '<img src="img/forbice.png" alt=""> <p> PERSO </p>';
+            document.getElementById('ris').innerHTML = '<img src="img/forbice.png" alt=""> <h2>HAI PERSO </h2>';
         }
         else{
-            document.getElementById('ris').innerHTML = '<img src="img/carta.png" alt=""> <p> PAREGGIO </p>';
+            document.getElementById('ris').innerHTML = '<img src="img/carta.png" alt=""> <h2>HAI PAREGGIATO </h2>';
         }
 
     }
