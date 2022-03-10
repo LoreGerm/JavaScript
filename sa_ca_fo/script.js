@@ -1,48 +1,27 @@
 function start(scelta){
+
     document.getElementById('home').classList.remove('d-none');
     document.getElementById('gioco').classList.add('d-none');
 
-    let risultato = Math.floor(Math.random() * 3);
-    const SASSO = 0;
-    const FORBI = 1;
-    const CARTA = 2;
+    const VIT_UT = 0;
+    const VIT_PC = 1;
+    const PARI = 2;
 
+    const MOSSE = ['sasso', 'forbice', 'carta'];
+    const MOSSA_PC = {
+        'sasso': ['PAREGGIO', 'HAI VINTO', 'HAI PERSO'],
+        'carta': ['HAI VINTO', 'HAI PERSO', 'PAREGGIO'],
+        'forbice': ['HAI PERSO', 'PAREGGIO', 'HAI VINTO']
+    }
 
-    if(scelta == SASSO){
-        if(risultato == SASSO){
-            document.getElementById('ris').innerHTML = '<img src="img/sasso.png" alt=""> <h2>HAI PAREGGIATO </h2>';
-        }
-        else if(risultato == FORBI){
-            document.getElementById('ris').innerHTML = '<img src="img/forbice.png" alt=""> <h2>HAI VINTO </h2>';
-        }
-        else{
-            document.getElementById('ris').innerHTML = '<img src="img/carta.png" alt=""> <h2>HAI PERSO </h2>';
-        }
-    }
-    else if(scelta == FORBI){
-        if(risultato == SASSO){
-            document.getElementById('ris').innerHTML = '<img src="img/sasso.png" alt=""> <h2>HAI PERSO </h2>';
-        }
-        else if(risultato == FORBI){
-            document.getElementById('ris').innerHTML = '<img src="img/forbice.png" alt=""> <h2>HAI PAREGGIATO </h2>';
-        }
-        else{
-            document.getElementById('ris').innerHTML = '<img src="img/carta.png" alt=""> <h2>HAI VINTO </h2>';
-        }
-    }
-    else if(scelta == CARTA){
-        if(risultato == SASSO){
-            document.getElementById('ris').innerHTML = '<img src="img/sasso.png" alt=""> <h2>HAI VINTO </h2>';
-        }
-        else if(risultato == FORBI){
-            document.getElementById('ris').innerHTML = '<img src="img/forbice.png" alt=""> <h2>HAI PERSO </h2>';
-        }
-        else{
-            document.getElementById('ris').innerHTML = '<img src="img/carta.png" alt=""> <h2>HAI PAREGGIATO </h2>';
-        }
+    let mossa_pc = Math.floor(Math.random() * MOSSE.length);
+    let ris = MOSSA_PC[scelta][mossa_pc]
 
-    }
+    let x = 'img/'+MOSSE[mossa_pc]+'.png';
+    document.getElementById('ris').innerHTML = '<img src="'+x+'" alt=""> <h2 style="background-color: rgb(0, 174, 255);"> '+ ris +' </h2>';
+
 }
+
 
 function home(){
     document.getElementById('home').classList.add('d-none');
