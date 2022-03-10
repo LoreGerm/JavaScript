@@ -15,10 +15,9 @@ function start(scelta){
     }
 
     let mossa_pc = Math.floor(Math.random() * MOSSE.length);
-    let ris = MOSSA_PC[scelta][mossa_pc]
 
-    let x = 'img/'+MOSSE[mossa_pc]+'.png';
-    document.getElementById('ris').innerHTML = '<img src="'+x+'" alt=""> <h2 style="background-color: rgb(0, 174, 255);"> '+ ris +' </h2>';
+    let img = 'img/'+MOSSE[mossa_pc]+'.png';
+    document.getElementById('ris').innerHTML = '<img src="'+ img +'" alt=""> <h2 style="background-color: rgb(0, 174, 255);"> '+ MOSSA_PC[scelta][mossa_pc] +' </h2>';
 
 }
 
