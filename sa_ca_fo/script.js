@@ -14,7 +14,6 @@ function start(scelta){
 
     let img = 'img/'+MOSSE[mossa_pc]+'.png';
     document.getElementById('ris').innerHTML = '<img src="'+ img +'" alt=""> <h2 style="background-color: rgb(0, 174, 255); border-radius: 25px;"> '+ MOSSA_PC[scelta][mossa_pc] +' </h2>';
-
 }
 
 
