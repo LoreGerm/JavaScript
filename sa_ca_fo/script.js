@@ -2,12 +2,15 @@ function start(scelta){
 
     document.getElementById('home').classList.remove('d-none');
     document.getElementById('gioco').classList.add('d-none');
+    document.getElementById('ris').classList.remove('d-none');  
 
-    const MOSSE = ['sasso', 'forbice', 'carta'];
+    const MOSSE = ['sasso', 'forbice', 'carta', 'lizard', 'spock'];
     const MOSSA_PC = {
-        'sasso': ['PAREGGIO', 'HAI VINTO', 'HAI PERSO'],
-        'carta': ['HAI VINTO', 'HAI PERSO', 'PAREGGIO'],
-        'forbice': ['HAI PERSO', 'PAREGGIO', 'HAI VINTO']
+        'sasso': ['PAREGGIO', 'HAI VINTO', 'HAI PERSO', 'HAI VINTO', 'HAI PERSO'],
+        'carta': ['HAI VINTO', 'HAI PERSO', 'PAREGGIO', 'HAI PERSO', 'HAI VINTO'],
+        'forbice': ['HAI PERSO', 'PAREGGIO', 'HAI VINTO', 'HAI VINTO', 'HAI PERSO'],
+        'lizard': ['HAI PERSO', 'HAI PERSO', 'HAI VINTO', 'PAREGGIO', 'HAI VINTO'],
+        'spock': ['HAI VINTO', 'HAI VINTO', 'HAI PERSO', 'HAI PERSO', 'PAREGGIO']
     }
 
     let mossa_pc = Math.floor(Math.random() * MOSSE.length);
@@ -19,5 +22,6 @@ function start(scelta){
 
 function home(){
     document.getElementById('home').classList.add('d-none');
-    document.getElementById('gioco').classList.remove('d-none');    
+    document.getElementById('gioco').classList.remove('d-none');
+    document.getElementById('ris').classList.add('d-none');  
 }

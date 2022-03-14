@@ -12,8 +12,8 @@
 <style>
 
 .sopra :hover{
-    background-color: rgb(0, 174, 255);
-    border-radius: 50%;
+    background-color: rgb(0, 174, 755);
+    border-radius: 75%;
     transition: 0.5s;
     transform: rotate(720deg);
 }
@@ -22,20 +22,25 @@
 
 <body style="background-color: #6b97d1; color: #fff; background-image: linear-gradient(to right, green , white, red);">
     <div class="d-none" id="home">
-        <button class="btn sopra" onclick="home()"><img src="img/home.png" alt="" style="width: 15%; margin-left: -50%;"></button>
+        <button class="btn sopra" onclick="home()"><img src="img/home.png" alt="" style="width: 15%; margin-left: -75%;"></button>
     </div>
     
     <div class="text-center">
         <div class="container" id="gioco">
-            <button id="sasso" value="sasso" class="btn sopra" onclick="start(this.id)"><img src="img/sasso.png" alt=""></button>
-            <button id="carta" value="carta" class="btn sopra" onclick="start(this.id)"><img src="img/carta.png" alt=""></button>
-            <button id="forbice" value="forbice" class="btn sopra" onclick="start(this.id)"><img src="img/forbice.png" alt=""></button>
+                <div class="d-flex">
+                    <button id="sasso" value="sasso" class="btn sopra" onclick="start(this.id)"><img class="w-75" src="img/sasso.png" alt=""></button>
+                    <button id="carta" value="carta" class="btn sopra" onclick="start(this.id)"><img class="w-75" src="img/carta.png" alt=""></button>
+                    <button id="forbice" value="forbice" class="btn sopra" onclick="start(this.id)"><img class="w-75" src="img/forbice.png" alt=""></button>
+                </div>
+                <div>
+                    <button id="lizard" value="lizard" class="btn sopra" onclick="start(this.id)"><img class="w-75" src="img/lizard.png" alt=""></button>
+                    <button id="spock" value="spock" class="btn sopra" onclick="start(this.id)"><img class="w-75" src="img/spock.png" alt=""></button>
+                </div>
         </div>
 
         <div id="ris" class="container sopra">
         </div>    
     </div>
-
 
 
     <script src="script.js"></script>
