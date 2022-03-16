@@ -28,39 +28,40 @@
         const BASE_URL = 'https://api.itbook.store/1.0/search/';
         function cerca() {
             fetch(BASE_URL + document.getElementById('key').value)
-            .then(response => response.json())
-            .then(data => {
-                let books = '';
-                for(let i=0; i<data['books'].length; i++){
-                    document.getElementById('ris').append(data['books'][i]);
-                }
-                //document.getElementById('ris').innerHTML = books;
+                .then(response => response.json())
+                .then(data => {
+                    let books = '';
+                    for (let i = 0; i < data['books'].length; i++) {
+                        document.getElementById('ris').append(data['books'][i]);
+                    }
+                    //document.getElementById('ris').innerHTML = books;
 
-            })
-            .catch(err => console.log('error'));
+                })
+                .catch(err => console.log('error'));
         }
 
-        function element(data){
-            
+        
+        function element(data) {
+
             const node = document.createElement('<div class="card mt-2" style="width: 18rem;">');
             node.innerHTML;
 
-            node = document.createElement('<img class="card-img-top" src="'+data['image']+'" alt="Card image cap">');
+            node = document.createElement('<img class="card-img-top" src="' + data['image'] + '" alt="Card image cap">');
             node.innerHTML;
 
             node = document.createElement('<div class="card-body">');
             node.innerHTML;
 
-            node = document.createElement('<h5 class="card-title">'+data['title']+'</h5>');
+            node = document.createElement('<h5 class="card-title">' + data['title'] + '</h5>');
             node.innerHTML;
 
-            node = document.createElement('<p class="card-text">'+data['subtitle']+'</p>');
+            node = document.createElement('<p class="card-text">' + data['subtitle'] + '</p>');
             node.innerHTML;
 
-            node = document.createElement('<h5 class="card-title">'+data['price']+'</h5>');
+            node = document.createElement('<h5 class="card-title">' + data['price'] + '</h5>');
             node.innerHTML;
 
-            node = document.createElement('<a href="'+data['url']+'" class="btn btn-primary">Compra</a>');
+            node = document.createElement('<a href="' + data['url'] + '" class="btn btn-primary">Compra</a>');
             node.innerHTML;
 
             return node;
