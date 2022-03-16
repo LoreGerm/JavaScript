@@ -42,7 +42,25 @@
 
         function element(data){
             
-            const node = document.createElement('<div class="card mt-2" style="width: 18rem;"><img class="card-img-top" src="'+data['image']+'" alt="Card image cap"><div class="card-body"><h5 class="card-title">'+data['title']+'</h5><p class="card-text">'+data['subtitle']+'</p><h5 class="card-title">'+data['price']+'</h5><a href="'+data['url']+'" class="btn btn-primary">Compra</a></div></div>');
+            const node = document.createElement('<div class="card mt-2" style="width: 18rem;">');
+            node.innerHTML;
+
+            node = document.createElement('<img class="card-img-top" src="'+data['image']+'" alt="Card image cap">');
+            node.innerHTML;
+
+            node = document.createElement('<div class="card-body">');
+            node.innerHTML;
+
+            node = document.createElement('<h5 class="card-title">'+data['title']+'</h5>');
+            node.innerHTML;
+
+            node = document.createElement('<p class="card-text">'+data['subtitle']+'</p>');
+            node.innerHTML;
+
+            node = document.createElement('<h5 class="card-title">'+data['price']+'</h5>');
+            node.innerHTML;
+
+            node = document.createElement('<a href="'+data['url']+'" class="btn btn-primary">Compra</a>');
             node.innerHTML;
 
             node.createElement()
