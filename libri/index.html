@@ -48,8 +48,16 @@
             const node = document.createElement('<div>');
             node.classList.add('card mt-2');
             node.style.width = '18rem';
-            let card = 
-            node.innerHTML;
+            let card = '<div class="card mt-2" style="width: 18rem; margin-right:5px;">'
+                        + '<img class="card-img-top" src="' + data['image'] + '" alt="Card image cap">'
+                            + '<div class="card-body">'
+                                + '<h5 class="card-title">' + data['title'] + '</h5>'
+                                + '<p class="card-text">' + data['subtitle'] + '</p>'
+                                + '<h5 class="card-title">' + data['price'] + '</h5>'
+                                + '<a href="' + data['url'] + '" class="btn btn-primary">Compra</a>'
+                        + '</div></div>';
+            
+            node.innerHTML = card;
 
             return node;
         }
