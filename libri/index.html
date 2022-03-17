@@ -35,14 +35,13 @@
                         document.getElementById('ris').append(element(data['books'][i]));
                     }
                 })
-                .catch(err => console.log('error'));
+                .catch(err => console.log(err));
         }
 
         
         function element(data) {
 
-            const node = document.createElement('<div>');
-            node.classList.add('row');
+            const node = document.createElement('div');
             let card = '<div class="card mt-2" style="width: 18rem; margin-right:5px;">'
                         + '<img class="card-img-top" src="' + data['image'] + '" alt="Card image cap">'
                             + '<div class="card-body">'
