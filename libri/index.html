@@ -14,11 +14,9 @@
 
 <body style="background-color: #997347;">
 
-    <div class="w-25 mt-3 container text-center">
-        <div class="row">
-            <input type="text" name="chiave" class="form-control" id="key" placeholder="Cerca">
-            <button class="btn btn-primary mt-2" onclick="cerca()"><i class="bi bi-search"></i></button>
-        </div>
+    <div class="mt-3 container d-flex flex-row bd-highlight w-25">
+        <input type="text" name="chiave" class="form-control" id="key" placeholder="Cerca">
+        <button class="btn btn-primary " onclick="cerca()"><i class="bi bi-search"></i></button>
     </div>
 
     <div class="mt-3 container text-center" id="">
@@ -29,6 +27,10 @@
     <script>
         const BASE_URL = 'https://api.itbook.store/1.0/search/';
         function cerca() {
+            console.log(document.getElementById('ris').innerHTML);
+            if(document.getElementById('ris').innerHTML != ''){
+                document.getElementById('ris').innerHTML = '';
+            }
             fetch(BASE_URL + document.getElementById('key').value)
                 .then(response => response.json())
                 .then(data => {
