@@ -42,9 +42,11 @@
                 .then(data => {
                     if(data['page'] != undefined){
                         pagina = data['page'];
+                        document.getElementById('loadmore').classList.remove('d-none');
                     }
                     else{
                         pagina = 0;
+                        document.getElementById('loadmore').classList.add('d-none');
                     }
 
                     for (let i = 0; i < data['books'].length; i++) {
@@ -52,7 +54,6 @@
                     }
                 })
                 .catch(err => console.log(err));
-                document.getElementById('loadmore').classList.remove('d-none');
         }
 
         function loadMore(){
