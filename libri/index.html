@@ -21,7 +21,7 @@
 
     <div class="mt-3 container text-center" id="">
         <div class="row" id="ris"></div>
-        <div class="row d-none btn btn-danger" id="loadmore" onclick="loadMore()"> Load more </div>
+        <div class="row d-none btn btn-danger " id="loadmore" onclick="loadMore()"> Load more </div>
     </div>
 
 
@@ -29,7 +29,10 @@
         const BASE_URL = 'https://api.itbook.store/1.0/search/';
         let pagina = 0;
 
-        function cerca() {
+        function cerca(){
+            if(document.getElementById('key').value == ''){
+                document.getElementById('loadmore').classList.add('d-none');
+            }
             console.log(document.getElementById('ris').innerHTML);
             if(document.getElementById('ris').innerHTML != ''){
                 document.getElementById('ris').innerHTML = '';
