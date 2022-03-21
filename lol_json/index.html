@@ -44,32 +44,34 @@
             .catch(err => console.log(err));
 
 
+        function elimina(){
+            
+        }
+        
+
         function element(data) {
-
-
             const node = document.createElement('tr');
             let td = '<td><img class="card-img-top" src="' + URL_IMG + data['image']['full'] + '" alt="Card image cap"></td>'
                 + '<td><p>' + data['name'] + ' - ' + data['title'] + '</p></td>'
                 + '<td><p>' + data['blurb'] + '</p></td>'
                 + '<td style="width:10%">'
-                    +'Attacco: <span id="att" class="'+colore(this.id)+'">'+ data['info']['attack'] + '</span>' 
-                    +'<br>Difesa: <span id="def">' + data['info']['defense'] + '</span>' 
-                    +'<br>Magia: <span id="mag">' + data['info']['magic'] + '</span>' 
-                    +'<br>Difficoltà: <span id="diff">' + data['info']['difficulty'] + '</span>' 
+                    +'Attacco: <span class="'+colore(data['info']['attack'])+'">'+ data['info']['attack'] + '</span>' 
+                    +'<br>Difesa: <span class="'+colore(data['info']['defense'])+'">' + data['info']['defense'] + '</span>' 
+                    +'<br>Magia: <span class="'+colore(data['info']['magic'])+'">' + data['info']['magic'] + '</span>' 
+                    +'<br>Difficoltà: <span class="'+colore(data['info']['difficulty'])+'">' + data['info']['difficulty'] + '</span>' 
                 +'</td>'
-                + '<td><button class="btn btn-danger"> <i class="bi bi-x-circle"></i> </button></td>';
+                + '<td><button class="btn btn-danger" onclick="elimina()"> <i class="bi bi-x-circle"></i> </button></td>';
 
             node.innerHTML = td;
 
             return node;
         }
 
-        function colore(id){
-            stat = document.getElementById(id);
-            if(stat.value <= '10' && stat.value >= '8'){
+        function colore(stat){
+            if(stat <= '10' && stat >= '8'){
                 return 'text-primary';
             }
-            else if(stat.value <= '7' && stat.value >= '5'){
+            else if(stat <= '7' && stat >= '5'){
                 return 'text-success';
             }
             else{
