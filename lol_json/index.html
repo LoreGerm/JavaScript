@@ -45,17 +45,17 @@
 
 
         function element(data) {
-            
+
 
             const node = document.createElement('tr');
             let td = '<td><img class="card-img-top" src="' + URL_IMG + data['image']['full'] + '" alt="Card image cap"></td>'
                 + '<td><p>' + data['name'] + ' - ' + data['title'] + '</p></td>'
                 + '<td><p>' + data['blurb'] + '</p></td>'
                 + '<td style="width:10%">'
-                    +'Attacco: <span id="att" onload="colStat(this.id)">'+ data['info']['attack'] + '</span>' 
-                    +'<br>Difesa: <span id="def" onload="colStat(this.id)">' + data['info']['defense'] + '</span>' 
-                    +'<br>Magia: <span id="mag" onload="colStat(this.id)">' + data['info']['magic'] + '</span>' 
-                    +'<br>Difficoltà: <span id="diff" onload="colStat(this.id)">' + data['info']['difficulty'] + '</span>' 
+                    +'Attacco: <span id="att" class="'+colore(this.id)+'">'+ data['info']['attack'] + '</span>' 
+                    +'<br>Difesa: <span id="def">' + data['info']['defense'] + '</span>' 
+                    +'<br>Magia: <span id="mag">' + data['info']['magic'] + '</span>' 
+                    +'<br>Difficoltà: <span id="diff">' + data['info']['difficulty'] + '</span>' 
                 +'</td>'
                 + '<td><button class="btn btn-danger"> <i class="bi bi-x-circle"></i> </button></td>';
 
@@ -64,16 +64,16 @@
             return node;
         }
 
-        function colStat(id){
+        function colore(id){
             stat = document.getElementById(id);
             if(stat.value <= '10' && stat.value >= '8'){
-                stat.classList = 'text-primary';
+                return 'text-primary';
             }
             else if(stat.value <= '7' && stat.value >= '5'){
-                stat.classList = 'text-success';
+                return 'text-success';
             }
             else{
-                stat.classList = 'text-danger';
+                return 'text-danger';
             }
         }
 
