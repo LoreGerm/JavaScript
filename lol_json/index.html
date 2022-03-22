@@ -38,19 +38,20 @@
             .then(response => response.json())
             .then(data => {
                 for (let i in data['data']) {
-                    document.getElementById('tbody').append(element(data['data'][i]));
+                    document.getElementById('tbody').append(element(data['data'][i], i));
                 }
             })
             .catch(err => console.log(err));
 
 
-        function elimina(){
-            
+        function elimina(id){
+            id.remove();
         }
         
 
-        function element(data) {
+        function element(data, i) {
             const node = document.createElement('tr');
+            node.id = i;
             let td = '<td><img class="card-img-top" src="' + URL_IMG + data['image']['full'] + '" alt="Card image cap"></td>'
                 + '<td><p>' + data['name'] + ' - ' + data['title'] + '</p></td>'
                 + '<td><p>' + data['blurb'] + '</p></td>'
@@ -60,7 +61,7 @@
                     +'<br>Magia: <span class="'+colore(data['info']['magic'])+'">' + data['info']['magic'] + '</span>' 
                     +'<br>Difficoltà: <span class="'+colore(data['info']['difficulty'])+'">' + data['info']['difficulty'] + '</span>' 
                 +'</td>'
-                + '<td><button class="btn btn-danger" onclick="elimina()"> <i class="bi bi-x-circle"></i> </button></td>';
+                + '<td><button class="btn btn-danger" onclick="elimina('+i+')"> <i class="bi bi-x-circle"></i> </button></td>';
 
             node.innerHTML = td;
 
