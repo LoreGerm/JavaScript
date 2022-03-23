@@ -75,10 +75,10 @@
                 + '<td><p>' + data['name'] + ' - ' + data['title'] + '</p></td>'
                 + '<td><p>' + data['blurb'] + '</p></td>'
                 + '<td style="width:10%">'
-                + 'Attacco: <span class="' + colore(data['info']['attack']) + '">' + data['info']['attack'] + '</span>'
-                + '<br>Difesa: <span class="' + colore(data['info']['defense']) + '">' + data['info']['defense'] + '</span>'
-                + '<br>Magia: <span class="' + colore(data['info']['magic']) + '">' + data['info']['magic'] + '</span>'
-                + '<br>Difficoltà: <span class="' + colore(data['info']['difficulty']) + '">' + data['info']['difficulty'] + '</span>'
+                + 'Attacco: <b class="' + colore(data['info']['attack']) + '">' + data['info']['attack'] + '</b>'
+                + '<br>Difesa: <b class="' + colore(data['info']['defense']) + '">' + data['info']['defense'] + '</b>'
+                + '<br>Magia: <b class="' + colore(data['info']['magic']) + '">' + data['info']['magic'] + '</b>'
+                + '<br>Difficoltà: <b class="' + colore(data['info']['difficulty']) + '">' + data['info']['difficulty'] + '</b>'
                 + '</td>'
                 + '<td><button class="btn btn-danger" onclick="elimina(' + i + ')" data-bs-toggle="modal" data-bs-target="#modal"> <i class="bi bi-x-circle"></i> </button></td>';
 
