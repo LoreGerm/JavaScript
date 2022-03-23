@@ -32,11 +32,10 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <h5 class="modal-title" id="exampleModalLabel"> Vuoi elimina il campione </h5>
+                <h5 class="modal-title" id="exampleModalLabel"> Vuoi eliminare il campione? </h5>
             </div>
             <div class="modal-footer" id="button">
                 
@@ -59,7 +58,7 @@
             .catch(err => console.log(err));
 
 
-        function elimina(id) {
+        function elimina(id){
             document.getElementById('button').innerHTML = '<button type="button" class="btn btn-secondary col" data-bs-dismiss="modal"> NO </button>'
                                                         +'<button type="button" class="btn btn-danger col" data-bs-dismiss="modal" onclick="del('+id.id+')"> SI </button>';
         }
